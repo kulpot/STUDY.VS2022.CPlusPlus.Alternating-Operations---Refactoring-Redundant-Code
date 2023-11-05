@@ -43,6 +43,8 @@ again:				; loop mul to add
 	;;;;;;;mov power, eax		; for intel structure running eax
 	;;;;;;;inc count
 
+	jmp CalculateNextPower			; jump is highly than goto
+back:
 	; Multiply the current power to the total
 	mov eax, power
 	mul ecx				; replace total to ecx
@@ -54,6 +56,8 @@ again:				; loop mul to add
 	;;;;;;;mov power, eax
 	;;;;;;;inc count
 
+	jmp CalculateNextPower
+back2:
 	; Add the power to total
 	add ecx, power
 
@@ -62,8 +66,13 @@ again:				; loop mul to add
 	jl again
 	ret
 
-
-
+CalculateNextPower:
+	; Next power:	; redundant code
+	mov eax, power
+	mul ebx			
+	mov power, eax
+	inc count
+	jmp back2			; BUG: theres back and back2 requires procedures
 
 
 
