@@ -37,22 +37,22 @@ doit proc
 	mov ecx, 1
 
 again:				; loop mul to add
-	; Next power:	; redundant code
-	mov eax, power		; for intel structure running eax
-	mul ebx				; for intel structure running eax
-	mov power, eax		; for intel structure running eax
-	inc count
+	;;;;;;;; Next power:	; redundant code
+	;;;;;;;mov eax, power		; for intel structure running eax
+	;;;;;;;mul ebx				; for intel structure running eax
+	;;;;;;;mov power, eax		; for intel structure running eax
+	;;;;;;;inc count
 
 	; Multiply the current power to the total
 	mov eax, power
 	mul ecx				; replace total to ecx
 	mov ecx, eax		; replace total to ecx
 
-	; Next power:	; redundant code
-	mov eax, power
-	mul ebx			
-	mov power, eax
-	inc count
+	;;;;;;;; Next power:	; redundant code
+	;;;;;;;mov eax, power
+	;;;;;;;mul ebx			
+	;;;;;;;mov power, eax
+	;;;;;;;inc count
 
 	; Add the power to total
 	add ecx, power
