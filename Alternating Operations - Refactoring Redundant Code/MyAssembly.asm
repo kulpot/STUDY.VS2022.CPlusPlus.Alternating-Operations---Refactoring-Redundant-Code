@@ -20,6 +20,17 @@ doit proc
 
 	; this is a comment i can type whatever i like after a semicolon and assembler will ignore it
 	
+	; -------------------- Alternating Operations - Refactoring Redundant Code ---------------------------
+
+
+
+
+
+
+
+
+
+
 	; -------------- Alternating Operations - Making the Loop Do All of the Work ----------------------------
 	
 	; * 2^1 + 2^2 * 2^3 + 2^4 * 2^5 + 2^6 +..... 2^n
